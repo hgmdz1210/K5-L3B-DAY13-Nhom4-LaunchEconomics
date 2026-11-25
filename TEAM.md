@@ -14,7 +14,7 @@
 |   1 | Đoàn Sỹ Hưng | 2A202603990 |       | https://github.com/hgmdz1210 | Người viết code |
 |   2 |        |      |       |        |         |
 |   3 | Lê Thị Ly|2A202603989 |lethily100202@gmail.com|LyLe10 | Người gán nhãn 1 |
-|   4 |        |      |       |        |         |
+|   4 | Quách Ngọc Huy      |  2A202603956    |  zellsed123@gmail.com     |  Zellsed      | Người gán nhãn 2        |
 
 Bốn vai của lab:
 
