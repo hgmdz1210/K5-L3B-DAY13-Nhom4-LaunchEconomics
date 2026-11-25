@@ -19,10 +19,10 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 | Trong đó, phần của lần chạy thứ 2 và 3 | 93.804 | attempt lớn hơn 1 | đo từ trace |
 | Xem lại (890 phút) | 1.780.000 | `phut_xem_lai_simulated` | simulated |
 | Làm lại (1.132 phút) | 2.264.000 | `phut_lam_lai_simulated` | simulated |
-| Tổng chi phí | 4.373.585 | | có phần simulated |
-| Số việc thành công | 978 | `ket_qua` | |
-| Chi phí mỗi việc thành công | 4.472 | | simulated |
-| Hoá đơn token và tool chia cho số yêu cầu | 274,7 | | đo từ trace |
+| Tổng chi phí | 4.373.585 | Token + tool + xem lại + làm lại | có phần simulated |
+| Số việc thành công | 978 |  `logix_request.csv` | đo từ trace |
+| Chi phí mỗi việc thành công | 4.472 | Tổng chi phí/ số việc thành công | simulated |
+| Hoá đơn token và tool chia cho số yêu cầu | 274,7 | (Token + tool)/1200 | đo từ trace |
 
 - Chi phí mỗi việc thành công gấp bao nhiêu lần "hoá đơn chia số yêu cầu"? Gấp **16,3 lần** (4.472 ÷ 274,7) [simulated]; tử số tính mọi lần chạy kể cả lỗi, mẫu số chỉ đếm 978 việc thành công.
 - Khoản nào chiếm tỉ trọng lớn nhất trong tổng chi phí, bao nhiêu phần trăm? **Làm lại 51,8%**, rồi xem lại 40,7% [simulated]; giờ nhân viên chiếm 92,5% tổng chi phí.
