@@ -13,7 +13,7 @@
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 |        |      |       |        |         |
 |   2 |        |      |       |        |         |
-|   3 | Lê Thị Ly|2A202603989 |lethily100202@gmail.com|LeLe10 | Người gán nhãn 1 |
+|   3 | Lê Thị Ly|2A202603989 |lethily100202@gmail.com|LyLe10 | Người gán nhãn 1 |
 |   4 |        |      |       |        |         |
 
 Bốn vai của lab:
