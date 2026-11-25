@@ -2,9 +2,9 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Lớp: L3A hoặc L3B
-- Repo nhóm: `K5-L3A-DAY13-TenNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
+- Tên nhóm: Nhom4
+- Lớp: L3B
+- Repo nhóm: `K5-L3B-DAY13-Nhom4-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
 - URL repo, nhánh nộp, commit chốt:
 
 ## Thành viên
@@ -66,3 +66,17 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - A2: 245.585 đ token, 84.000 đ tool, 4.373.585 đ tổng, 978 việc thành công; chi phí mỗi việc 4.471,97 đ.
 - D1: 1.251 yêu cầu/nhóm cho +5 điểm, 299 yêu cầu/nhân viên cho +6 điểm với 20 nhân viên/nhóm.
+
+## DoanSyHung-2A202603990
+
+### Phần việc phụ trách
+
+- Người viết code: `src/lab13.py` (A, B, D1, E1), `report/team/bang_chi_phi.md`, `report/team/pilot_plan.yaml`, `report/team/chi_so.md`.
+
+### Đóng góp cụ thể
+
+- Viết mô hình chi phí, bảng độ nhạy, cỡ mẫu D1 và ba chỉ số E1; điền ba file hồ sơ trên; chỉnh cột phát hiện ở ca 1, 20, 16 trong `bang_loi.md`.
+
+### Bằng chứng
+
+- Commit `3bd9d03`, `5afef7a`, `48d1b09`; báo cáo cá nhân `report/team/2A202603990_DoanSyHung.md`.
