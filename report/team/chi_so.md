@@ -1,24 +1,20 @@
 # Đặc tả chỉ số, event và rủi ro kinh tế · Nhiệm vụ E1, E2
 
-Số tính bằng `src/lab13.py` (mục E1). Mọi số tính từ cột `_simulated` ghi nhãn `simulated`.
-
 ## E1 · Đặc tả chỉ số
 
 | Loại | Chỉ số | Công thức | Tính thử trên 1.200 yêu cầu |
 | --- | --- | --- | --- |
-| Chính (kết quả) | % yêu cầu đóng trong 24 giờ và không mở lại trong 7 ngày | `dong_trong_24h` bằng 1 và `mo_lai_trong_7_ngay` bằng 0, chia tổng số yêu cầu | **82,83%** (994/1.200); trong phạm vi noi_dia + hang_nang: 92,26% |
+| Chính (kết quả) | % yêu cầu đóng trong 24 giờ và không mở lại trong 7 ngày | `dong_trong_24h` bằng 1 và `mo_lai_trong_7_ngay` bằng 0, chia tổng số yêu cầu | **82,83%** (994/1.200) |
 | Dùng | Tỉ lệ bỏ qua gợi ý | `quyet_dinh_xem_lai` là `sua` hoặc `bo`, chia số yêu cầu được xem lại | **27,12%** (48/177) |
-| An toàn | Tỉ lệ lỗi lọt đến khách | `mo_lai_trong_7_ngay` bằng 1, chia tổng số yêu cầu | **4,25%** (51/1.200); trong phạm vi noi_dia + hang_nang: 3,97% |
+| An toàn | Tỉ lệ lỗi lọt đến khách | `mo_lai_trong_7_ngay` bằng 1, chia tổng số yêu cầu | **4,25%** (51/1.200) |
 | Dùng | Nhóm tự đề xuất: % yêu cầu của nhóm can thiệp được nhân viên mở bằng trợ lý | Số yêu cầu có `agent_suggestion_shown` ÷ số yêu cầu gán cho nhân viên nhóm trợ lý, theo tuần | Không cần tính |
 | An toàn | Nhóm tự đề xuất: % đơn hoàn sai tiền qua kiểm tra mẫu hằng tuần (bắt lỗi ngầm như ca 5, 17) | `so_tien_da_hoan` khác `so_tien_dung` ÷ số đơn trong mẫu 100 đơn mỗi tuần | Không cần tính |
 
-Viết "chỉ số trong đợt chạy thử là 82,83%", không viết "trợ lý đã nâng chỉ số từ 0,70": đợt chạy thử không có nhóm đối chứng. Baseline 0,70 là số của công ty, không phải số của đợt chạy thử.
-
-Trong phạm vi noi_dia + hang_nang, chỉ số chính cao hơn (92,26%) và tỉ lệ mở lại thấp hơn một chút (3,97%) so với cả mẫu. Cả 51 ca mở lại đều thuộc nhóm `lam_lai` (51/74 ca làm lại); không ca `thanh_cong` hay `chuyen_nhan_vien` nào bị mở lại.
+Viết "chỉ số trong đợt chạy thử là 82,83%", không viết "trợ lý đã nâng chỉ số": đợt chạy thử không có nhóm đối chứng.
 
 ## Danh sách event
 
-Mười event, mỗi event có `trace_id` để nối với trace của agent.
+Ít nhất sáu event, mỗi event có `trace_id` để nối với trace của agent.
 
 | Event | Ai tạo | Thuộc tính chính | Thời điểm |
 | --- | --- | --- | --- |

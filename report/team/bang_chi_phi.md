@@ -26,7 +26,6 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 
 - Chi phí mỗi việc thành công gấp bao nhiêu lần "hoá đơn chia số yêu cầu"? Gấp **16,3 lần** (4.472 ÷ 274,7) [simulated]; tử số tính mọi lần chạy kể cả lỗi, mẫu số chỉ đếm 978 việc thành công.
 - Khoản nào chiếm tỉ trọng lớn nhất trong tổng chi phí, bao nhiêu phần trăm? **Làm lại 51,8%**, rồi xem lại 40,7% [simulated]; giờ nhân viên chiếm 92,5% tổng chi phí.
-- Lưu ý khi so với 12.000 đ: 4.472 đ chưa tính 148 ca `chuyen_nhan_vien` (cộng 74 ca `lam_lai` thành 222 ca không thành công). Chi phí cả hệ thống = (4.373.585 + 222 × 12.000) ÷ 1.200 = **5.865 đ/yêu cầu = 0,49×** của 12.000 đ [simulated].
 
 ## A3 · Tách theo loại yêu cầu
 
@@ -37,16 +36,7 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 | quoc_te | 150 | 27,3% | 2,32 | 22.515 đ [simulated] | 1,88× |
 | doi_tac | 68 | 54,4% | 1,88 | 10.215 đ [simulated] | 0,85× |
 
-Tỉ lệ `ok` theo lần thử (đo từ trace):
-
-| Loại | Lần 1 | Lần 2 | Lần 3 |
-| --- | ---: | ---: | ---: |
-| noi_dia | 91,0% | 75,7% | 38,9% |
-| hang_nang | 70,9% | 39,1% | 17,9% |
-| quoc_te | 30,0% | 11,4% | 2,2% |
-| doi_tac | 51,5% | 18,2% | 14,8% |
-
-- Loại nào không đáng để trợ lý xử lý? **quoc_te** (1,88× > 1, thành công 27,3%) [simulated]; chạy lại không giúp: tỉ lệ ok giảm 30,0% → 11,4% → 2,2%, lỗi lặp lại nên chỉ tốn thêm tiền. **doi_tac** (0,85×, có điều khoản riêng) sát ngưỡng nên cũng loại khỏi phạm vi pilot.
+- Loại nào không đáng để trợ lý xử lý? **quoc_te** (1,88×, thành công 27,3%) [simulated]; chạy lại không giúp vì tỉ lệ ok theo lần thử giảm 30,0% → 11,4% → 2,2% (đo từ trace), lỗi lặp lại nên chỉ tốn thêm tiền. **doi_tac** (0,85×) sát ngưỡng và có điều khoản riêng nên cũng loại khỏi phạm vi pilot.
 
 ## A4 · Chi phí cố định (phạm vi noi_dia + hang_nang)
 
@@ -55,11 +45,9 @@ Tỉ lệ `ok` theo lần thử (đo từ trace):
 | 45.000 yêu cầu/tháng | 33.750 | 1.185 đ | 4.599 đ [simulated] | 0,38× |
 | Một nửa khối lượng | 16.875 | 2.370 đ | 5.784 đ [simulated] | 0,48× |
 
-- Chi phí cố định có đổi kết luận không? Không: vẫn dưới 12.000 đ (0,38× ở 45.000 yêu cầu/tháng, 0,48× ở một nửa), nhưng cố định mỗi việc tăng gấp đôi khi khối lượng giảm một nửa, nên hồ sơ phải ghi rõ con số đã cộng cố định hay chưa và ở khối lượng nào. Cách tính: 45.000 × 900 ÷ 1.200 = 33.750 việc/tháng; 40.000.000 ÷ 33.750 = 1.185 đ; cps trong phạm vi 3.414 đ.
+- Chi phí cố định có đổi kết luận không? Không: vẫn dưới 12.000 đ (0,38× và 0,48× [simulated]), nhưng cố định mỗi việc gấp đôi khi khối lượng giảm một nửa (1.185 đ → 2.370 đ), nên hồ sơ phải ghi rõ đã cộng cố định chưa và ở khối lượng nào.
 
 ## B1 · Đổi từng yếu tố
-
-Gốc (A2): 4.472 đ [simulated].
 
 | Kịch bản | Cách tính | Chi phí mỗi việc thành công | Thay đổi (%) |
 | --- | --- | ---: | ---: |
@@ -73,16 +61,12 @@ Gốc (A2): 4.472 đ [simulated].
 | Chỉ cho chạy tối đa 2 lần | Bỏ lần chạy có attempt > 2; yêu cầu có so_lan_chay > 2 coi là chuyen_nhan_vien | 4.237 đ | −5,2% |
 | Chỉ cho chạy 1 lần | Như trên với giới hạn 1 | 4.111 đ | −8,1% |
 
-Tất cả số trong bảng là [simulated] (có tiền xem lại và làm lại). Tự kiểm tra: mỗi dòng "giảm một nửa" bằng đúng nửa mức tăng của dòng "gấp đôi" (2,8 = 5,6 ÷ 2; 20,3 = 40,7 ÷ 2); `lab13.py` có assert cho việc này.
-
 ## B2 · Đổi một cặp và xếp hạng
 
 - Giá token gấp đôi cùng lúc tỉ lệ xem lại gấp đôi: **6.543 đ (+46,3%)** [simulated], đúng bằng tổng hai tác động riêng (5,6% + 40,7%) vì mô hình cộng tuyến tính.
-- Xếp hạng ba yếu tố ảnh hưởng mạnh nhất: 1. số ca làm lại (±51,8%) · 2. tỉ lệ xem lại (±40,7%) · 3. lương nhân viên (+23,1%). Giá token chỉ +5,6%, xếp sau cùng.
+- Xếp hạng ba yếu tố ảnh hưởng mạnh nhất [simulated]: 1. số ca làm lại (±51,8%) · 2. tỉ lệ xem lại (±40,7%) · 3. lương nhân viên (+23,1%). Giá token chỉ +5,6%, xếp sau cùng.
 
 ## B3 · Giới hạn chạy lại có thật sự rẻ hơn
-
-Chi phí cả hệ thống = tổng chi phí trợ lý + 12.000 đ × số yêu cầu không thành công (nhân viên làm thay). Tất cả [simulated].
 
 | Giới hạn | Tổng chi phí trợ lý | Số yêu cầu không thành công | Chi phí cả hệ thống | Chi phí mỗi việc thành công |
 | --- | ---: | ---: | ---: | ---: |
@@ -94,5 +78,5 @@ Chi phí cả hệ thống = tổng chi phí trợ lý + 12.000 đ × số yêu 
 
 ## B4 · Nếu phải xem lại tất cả
 
-- Chi phí mỗi việc thành công khi xem lại 100% (`noi_dia` + `hang_nang`, 982 yêu cầu, 900 việc thành công), so với 12.000 đ: 948 yêu cầu có ít nhất một lần chạy ok × 5 phút xem + 48 ca làm lại × 9 phút + token/tool 224.513 đ = 10.568.513 đ ÷ 900 = **11.743 đ = 0,98×** [simulated]. Nếu dùng 15,3 phút làm lại như cột `phut_lam_lai_simulated` (trung bình toàn bộ 74 ca lam_lai, trung vị 14,5): **12.415 đ = 1,03×** [simulated]. Mức hoà vốn: mỗi lần xem lại phải ≤ 5,1 phút (làm lại 9 phút) hoặc ≤ 4,8 phút (làm lại 15,3 phút) [simulated].
-- Kết quả này nói gì về thứ pilot cần học được? Xem lại 100% thì trợ lý gần như không tiết kiệm (tiền xem lại chiếm khoảng 90% chi phí), nên pilot phải học được tỉ lệ xem lại có thể giảm an toàn xuống mức nào, và mỗi lần xem lại có ngắn hơn 5 phút được không.
+- Chi phí mỗi việc thành công khi xem lại 100% (`noi_dia` + `hang_nang`), so với 12.000 đ: (948 × 5 + 48 × 9 phút) × 2.000 đ + 224.513 đ token/tool = 10.568.513 đ ÷ 900 = **11.743 đ = 0,98×** [simulated]. Nếu làm lại 15,3 phút như dữ liệu: **12.415 đ = 1,03×**; hoà vốn khi xem lại ≤ 5,1 phút (≤ 4,8 phút) [simulated].
+- Kết quả này nói gì về thứ pilot cần học được? Xem lại 100% thì trợ lý gần như không tiết kiệm (tiền xem lại chiếm khoảng 90% chi phí), nên pilot phải học được tỉ lệ xem lại giảm an toàn được tới đâu và mỗi lần xem lại có ngắn hơn 5 phút được không.
