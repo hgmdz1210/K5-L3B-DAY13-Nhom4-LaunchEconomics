@@ -11,7 +11,7 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
+|   1 | Đoàn Sỹ Hưng | 2A202603990 |       | https://github.com/hgmdz1210 | Người viết code |
 |   2 |        |      |       |        |         |
 |   3 | Lê Thị Ly|2A202603989 |lethily100202@gmail.com|LyLe10 | Người gán nhãn 1 |
 |   4 |        |      |       |        |         |
