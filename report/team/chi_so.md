@@ -23,11 +23,12 @@ Viết "chỉ số trong đợt chạy thử là 82,83%", không viết "trợ l
 | `agent_suggestion_shown` | Giao diện nhân viên | staff_id, so_tien_de_xuat, trace_id | Khi gợi ý hiện ra |
 | `staff_review_decision` | Nhân viên | quyet_dinh (giu/sua/bo), phut_xem_lai (đo thật), trace_id | Khi bấm gửi, sửa hoặc bỏ |
 | `staff_rework_completed` | Nhân viên | phut_lam_lai (đo thật), ly_do, trace_id | Khi làm lại xong |
-| `refund_ledger_write` | Dịch vụ sổ cái | idempotency_key, so_tien, ket_qua, trace_id | Khi ghi sổ |
+| `refund_ledger_write` | Dịch vụ sổ cái | request_id, idempotency_key, so_tien, ket_qua, trace_id | Khi ghi sổ |
 | `handoff_to_staff` | Agent | reason, tom_tat, trace_id | Khi chuyển nhân viên |
 | `ticket_closed` | Hệ thống ticket | closed_at, trace_id | Khi đóng yêu cầu |
 | `ticket_reopened` | Khách | reopened_at, reason, trace_id | Khi khách mở lại |
 | `audit_sample_checked` | Kế toán | so_tien_da_hoan, so_tien_dung, trace_id | Hằng tuần, mẫu 100 đơn |
+| `notification_sent` | Dịch vụ thông báo | request_id, kenh (zalo/sms), sent_at, trace_id | Khi gửi thông báo cho khách |
 
 **Kiểm tra chéo:** với mỗi chỉ số ở bảng E1, event dùng để tính:
 
