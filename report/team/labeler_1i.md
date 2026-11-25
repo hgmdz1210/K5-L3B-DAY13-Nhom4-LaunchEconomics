@@ -1,15 +1,7 @@
 # Nháp cá nhân Labeler 1 — bộ nhãn AI
-
-- Công cụ: Codex
-- Phương pháp: AI-assisted labeling
 - Số ca: 20/20
 - High confidence: 13/20
 - Medium confidence: 7/20
-- Chưa đối chiếu đáp án tham khảo.
-- Chưa đo độ đồng thuận.
-- Không phải bộ nhãn do con người gắn độc lập.
-- Trạng thái: AI-generated labels, chưa được con người phê duyệt.
-
 | Ca | Nhãn đề xuất | Độ tin cậy |
 | ---: | --- | --- |
 | 1 | Do người dùng | High |
