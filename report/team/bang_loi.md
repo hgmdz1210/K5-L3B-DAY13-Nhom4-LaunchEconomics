@@ -43,8 +43,8 @@ Cách phát hiện phải đo được (event, ngưỡng, tần suất). Ngườ
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
 | --: | --- | --- | --- | --- |
-| 1 | Do người dùng | `refund_ledger_write` có `ket_qua` là lỗi từ ngân hàng (sai số tài khoản) > 2% số yêu cầu/tuần | Kiểm tra độ dài và định dạng số tài khoản ngay trên form trước khi gửi; hiển thị hướng dẫn nhập đúng | Kỹ sư trưởng agent |
+| 1 | Do người dùng | `refund_ledger_write` có `ket_qua` là lỗi từ ngân hàng (sai số tài khoản) > 2% số yêu cầu/tuần | Kiểm tra độ dài và định dạng số tài khoản ngay trên form trước khi gửi; hiển thị hướng dẫn nhập đúng | PM trợ lý hoàn phí |
 | 20 | Hệ thống | Đối soát hằng giờ `refund_ledger_write`: ≥ 2 bản ghi cùng `request_id`, hoặc bản ghi thiếu `idempotency_key` (ngưỡng ≥ 1 ca) | Bắt buộc gắn `idempotency_key` theo `request_id` ở sổ cái và khoá nút gửi lại khi đang xử lý | Kỹ sư trưởng agent |
-| 16 | Ngữ cảnh | `notification_sent` có `sent_at` ngoài 07:00–21:00 (ngưỡng 0 thông báo/ngày), hoặc `ticket_reopened` với `reason` là bị làm phiền ngoài giờ > 1%/tuần | Hạn chế gửi thông báo Zalo khung 21:00–07:00, dời sang 07:30 sáng hôm sau | Trưởng nhóm CSKH |
-| 19 | Giới hạn hệ thống | `handoff_to_staff` với lý do ngoài dữ liệu 12 tháng hoặc ngoài phạm vi > 5%/tuần | Nhận diện sớm giới hạn dữ liệu/phạm vi ở lần chạy 1, thông báo rõ cho khách và chuyển nhân viên kèm tóm tắt | PM trợ lý hoàn phí |
-| 5 | Ngầm | `audit_sample_checked` hằng tuần (100 đơn/tuần) thấy `so_tien_da_hoan != so_tien_dung` > 1% mẫu | Đối soát tự động giá sau mã giảm giá trước khi gọi `refund_ledger_write` và duy trì kiểm mẫu hằng tuần | PM trợ lý hoàn phí |
+| 16 | Ngữ cảnh | `notification_sent` có `sent_at` ngoài 07:00–21:00 (ngưỡng 0 thông báo/ngày), hoặc `ticket_reopened` với `reason` là bị làm phiền ngoài giờ > 1%/tuần | Hạn chế gửi thông báo Zalo khung 21:00–07:00, dời sang 07:30 sáng hôm sau | PM trợ lý hoàn phí |
+| 19 | Giới hạn hệ thống | `handoff_to_staff` với lý do ngoài dữ liệu 12 tháng hoặc ngoài phạm vi > 5%/tuần | Giữ cách chuyển nhân viên kèm tóm tắt (trợ lý đã làm đúng); quyết định mở quyền tra dữ liệu quá 12 tháng hoặc ghi rõ trong chính sách chỉ nhận yêu cầu trong 12 tháng | PM trợ lý hoàn phí |
+| 5 | Ngầm | `audit_sample_checked` hằng tuần (100 đơn/tuần) thấy `so_tien_da_hoan != so_tien_dung` > 1% mẫu | Đối soát tự động giá sau mã giảm giá trước khi gọi `refund_ledger_write` và duy trì kiểm mẫu hằng tuần | Kế toán trưởng |

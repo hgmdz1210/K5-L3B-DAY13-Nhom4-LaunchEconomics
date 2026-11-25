@@ -94,3 +94,18 @@ Sao chép mục dưới đây cho từng thành viên.
 ### Bằng chứng
 
 - Commit `12ee1b5`, `7e4d683`, `a2bc6c1`, `91a14d9`; báo cáo cá nhân `report/team/2A202603989_LeThiLy.md`.
+
+## QuachNgocHuy-2A202603956
+
+### Phần việc phụ trách
+
+- Người gắn nhãn 2 kiêm giữ hồ sơ: cột `Nhãn người 2` và bảng khắc phục 5 ca trong `report/team/bang_loi.md`; hồ sơ `report/team/ho_so_launch_v0.md`.
+
+### Đóng góp cụ thể
+
+- Gắn nhãn 20 ca lỗi theo 5 loại PAIR, chọn 5 ca (1, 20, 16, 19, 5) và viết cách khắc phục, người phụ trách cho từng ca.
+- Ghép số của các nhiệm vụ A–D vào hồ sơ 7 mục; viết đề xuất Go có điều kiện với 3 điều kiện, mỗi điều kiện có người phụ trách và ngày kiểm tra.
+
+### Bằng chứng
+
+- Commit `e4c0876`, `b579406`; báo cáo cá nhân `report/team/2A202603956_QuachNgocHuy.md`.
