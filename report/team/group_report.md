@@ -30,7 +30,8 @@ Con số chính (ghi nhãn `simulated` khi cần) và đề xuất cuối của 
 - Pilot: chia theo nhân viên 20 + 20, mức chênh 6 điểm (n = 859 mỗi nhóm, DE = 6,96), power khoảng 0,64 nếu tác động thật là 5 điểm; phạm vi `noi_dia` + `hang_nang`.
 - Chỉ số trong đợt chạy thử: chính 82,83%, dùng (bỏ qua gợi ý) 27,12%, an toàn (mở lại 7 ngày) 4,25%.
 - **Đề xuất: Go có điều kiện** cho pilot `noi_dia` + `hang_nang`.
-- Kết quả duyệt chéo: chưa có (nhóm chưa được chấm tại thời điểm viết).
+- Kết quả duyệt chéo (phiếu của nhóm AAA, L3B): **30/30** (10 + 10 + 10), quyết định **Go có điều kiện**. Góp ý: đưa lộ trình giảm tỉ lệ xem lại vào điều kiện Go, thống nhất phạm vi 12 depot trong `pilot_plan.yaml` (đang ghi 6 depot), và làm rõ luật dừng hoàn trùng kích hoạt ngay khi có từ 1 ca.
+- Câu hỏi của hội đồng: nếu tuần đầu phải xem lại 100% và chỉ chạy 6 depot, pilot còn tiết kiệm và đủ `m ≥ 299` yêu cầu mỗi nhân viên trong 2 tuần không. Nhóm trả lời (theo phiếu): tuần 1 chấp nhận xem lại cao để đo phút thật, từ bước `0.25` giảm xem lại theo bậc khi `sua + bo` dưới 15%; pilot chạy 12 depot với 40 nhân viên (921 yêu cầu mỗi người mỗi tháng) nên bước `0.50` chạy ít nhất 2 tuần vẫn đủ 299.
 
 ## 5. Khó khăn và cách xử lý
 
