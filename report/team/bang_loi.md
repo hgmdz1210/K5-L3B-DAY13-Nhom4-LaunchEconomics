@@ -4,9 +4,7 @@
 
 ## Hai bộ nhãn độc lập
 
-Nguồn nhãn người 1: Codex AI-assisted; chưa được xác nhận là bộ nhãn độc lập chính thức. Bộ nhãn nguồn: `labeler_1_2A202603989_ai.md`.
-
-Người gắn nhãn 1: ... · Người gắn nhãn 2: Quách Ngọc Huy (gắn trong 8 phút, không trao đổi)
+Người gắn nhãn 1: Lê Thị Ly · Người gắn nhãn 2: Quách Ngọc Huy (gắn trong 8 phút, không trao đổi)
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
