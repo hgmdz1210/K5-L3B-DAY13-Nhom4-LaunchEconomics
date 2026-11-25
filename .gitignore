@@ -7,7 +7,9 @@ __pycache__/
 .DS_Store
 .venv/
 venv/
+src/kiem_so_nguoi_2.py
 # Bài làm mẫu (có đáp án) không đưa vào repo đề bài
 example.zip
 example/
 __MACOSX/
+work_nguoi_2/

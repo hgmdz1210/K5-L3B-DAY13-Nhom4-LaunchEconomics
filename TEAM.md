@@ -50,3 +50,19 @@ Sao chép mục dưới đây cho từng thành viên.
 ### Bằng chứng
 
 -
+
+## Hoàng Ngọc Hiệu-2A202603976
+
+### Phần việc phụ trách
+
+- Người kiểm số: đối chiếu A2, A3, B1/B3 và D1 từ dữ liệu CSV; ghi kết quả và cách tính vào báo cáo cá nhân.
+
+### Đóng góp cụ thể
+
+- Đối chiếu các khoản chi phí, kết quả theo loại, độ nhạy, giới hạn chạy lại và cỡ mẫu.
+- Ghi bằng chứng kết quả ở `report/team/2A202603976_HoangNgocHieu.md`; helper kiểm tra chỉ là file cục bộ, bị loại khỏi Git.
+
+### Bằng chứng
+
+- A2: 245.585 đ token, 84.000 đ tool, 4.373.585 đ tổng, 978 việc thành công; chi phí mỗi việc 4.471,97 đ.
+- D1: 1.251 yêu cầu/nhóm cho +5 điểm, 299 yêu cầu/nhân viên cho +6 điểm với 20 nhân viên/nhóm.
