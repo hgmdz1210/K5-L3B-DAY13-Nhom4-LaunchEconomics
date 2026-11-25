@@ -80,3 +80,17 @@ Sao chép mục dưới đây cho từng thành viên.
 ### Bằng chứng
 
 - Commit `3bd9d03`, `5afef7a`, `48d1b09`; báo cáo cá nhân `report/team/2A202603990_DoanSyHung.md`.
+
+## LeThiLy-2A202603989
+
+### Phần việc phụ trách
+
+- Người gán nhãn 1: phân loại lỗi 20 ca tại CP3, rà soát và cập nhật `report/team/bang_loi.md`.
+
+### Đóng góp cụ thể
+
+- Gán nhãn, đối chiếu tiêu chí phân loại lỗi, cập nhật bảng lỗi và loại bỏ bản nháp chưa đáp ứng yêu cầu gán nhãn độc lập.
+
+### Bằng chứng
+
+- Commit `12ee1b5`, `7e4d683`, `a2bc6c1`, `91a14d9`; báo cáo cá nhân `report/team/2A202603989_LeThiLy.md`.
