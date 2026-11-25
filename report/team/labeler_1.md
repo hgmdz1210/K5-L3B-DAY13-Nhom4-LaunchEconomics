@@ -2,6 +2,7 @@
 - Số ca: 20/20
 - High confidence: 13/20
 - Medium confidence: 7/20
+  
 | Ca | Nhãn đề xuất | Độ tin cậy |
 | ---: | --- | --- |
 | 1 | Do người dùng | High |
