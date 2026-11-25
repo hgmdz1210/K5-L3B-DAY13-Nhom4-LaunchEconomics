@@ -6,38 +6,38 @@
 
 Nguồn nhãn người 1: Codex AI-assisted; chưa được xác nhận là bộ nhãn độc lập chính thức. Bộ nhãn nguồn: `labeler_1_2A202603989_ai.md`.
 
-Người gắn nhãn 1: ... · Người gắn nhãn 2: ... (gắn trong 8 phút, không trao đổi)
+Người gắn nhãn 1: ... · Người gắn nhãn 2: Quách Ngọc Huy (gắn trong 8 phút, không trao đổi)
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
-| 1 | Do người dùng | ... | ... | ... |
-| 2 | Hệ thống | ... | ... | ... |
-| 3 | Ngữ cảnh | ... | ... | ... |
-| 4 | Giới hạn hệ thống | ... | ... | ... |
-| 5 | Ngầm | ... | ... | ... |
-| 6 | Do người dùng | ... | ... | ... |
-| 7 | Hệ thống | ... | ... | ... |
-| 8 | Hệ thống | ... | ... | ... |
-| 9 | Do người dùng | ... | ... | ... |
-| 10 | Ngữ cảnh | ... | ... | ... |
-| 11 | Giới hạn hệ thống | ... | ... | ... |
-| 12 | Ngầm | ... | ... | ... |
-| 13 | Giới hạn hệ thống | ... | ... | ... |
-| 14 | Do người dùng | ... | ... | ... |
-| 15 | Hệ thống | ... | ... | ... |
-| 16 | Ngữ cảnh | ... | ... | ... |
-| 17 | Ngầm | ... | ... | ... |
-| 18 | Ngữ cảnh | ... | ... | ... |
-| 19 | Giới hạn hệ thống | ... | ... | ... |
-| 20 | Hệ thống | ... | ... | ... |
+| 1 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 2 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 3 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 5 | Ngầm | Ngầm | Có | Ngầm |
+| 6 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 7 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 8 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 9 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 10 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 12 | Ngầm | Ngầm | Có | Ngầm |
+| 13 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 14 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 15 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 16 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 17 | Ngầm | Ngầm | Có | Ngầm |
+| 18 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Tỉ lệ đồng thuận:** ... / 20 = ...%
+**Tỉ lệ đồng thuận:** 20 / 20 = 100%
 
 ## Quy tắc phân biệt cho các ca không trùng
 
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
 
-- ...
+- Không có ca không trùng (đồng thuận 20/20 = 100%).
 
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
 
@@ -45,8 +45,8 @@ Cách phát hiện phải đo được (event, ngưỡng, tần suất). Ngườ
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
 | --: | --- | --- | --- | --- |
-| ... | Do người dùng | ... | ... | ... |
-| ... | Hệ thống | ... | ... | ... |
-| ... | Ngữ cảnh | ... | ... | ... |
-| ... | Giới hạn hệ thống | ... | ... | ... |
-| ... | Ngầm | ... | ... | ... |
+| 1 | Do người dùng | `refund_ledger_write` lỗi định dạng STK hoặc `handoff_to_staff` (`invalid_bank_account`) > 2%/tuần | Kiểm tra độ dài và định dạng số tài khoản ngay trên form trước khi gửi; hiển thị hướng dẫn nhập đúng | Kỹ sư trưởng agent |
+| 20 | Hệ thống | `refund_ledger_write` có ≥ 2 bản ghi cùng `idempotency_key` hoặc `request_id` (ngưỡng ≥ 1 ca/tuần) | Bắt buộc gắn `idempotency_key` theo `request_id` ở sổ cái và khoá nút gửi lại khi đang xử lý | Kỹ sư trưởng agent |
+| 16 | Ngữ cảnh | Thời điểm gửi thông báo ngoài 07:00–21:00 hoặc `ticket_reopened` do phàn nàn làm phiền > 1%/tuần | Hạn chế gửi thông báo Zalo khung 21:00–07:00 (dời sang 07:30 sáng hôm sau) | Trưởng nhóm CSKH |
+| 19 | Giới hạn hệ thống | `handoff_to_staff` với lý do ngoài dữ liệu 12 tháng hoặc ngoài phạm vi > 5%/tuần | Nhận diện sớm giới hạn dữ liệu/phạm vi ở lần chạy 1, thông báo rõ cho khách và chuyển nhân viên kèm tóm tắt | PM trợ lý hoàn phí |
+| 5 | Ngầm | `audit_sample_checked` hằng tuần (100 đơn/tuần) thấy `so_tien_da_hoan != so_tien_dung` > 1% mẫu | Đối soát tự động giá sau mã giảm giá trước khi gọi `refund_ledger_write` và duy trì kiểm mẫu hằng tuần | PM trợ lý hoàn phí |
