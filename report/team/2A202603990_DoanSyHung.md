@@ -50,7 +50,7 @@
   - Chạy `python lab13.py` trong `src/`, phải thoát với mã 0 và in ba phép thử A1 là ĐẠT.
   - Đối chiếu từng con số (A2, A3, A4, B1–B4, D1, E1) với số đáp án trong `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md`; lệch không quá 2% (B4 ở mức 15,3 phút lệch 1 đ do làm tròn).
   - Mã có sẵn phép kiểm tra tự động: kịch bản "giảm một nửa" bằng đúng nửa mức tăng của "gấp đôi".
-  - `yaml.safe_load` đọc được `pilot_plan.yaml`, không còn dấu `?` ngoài chú thích, mỗi luật dừng đủ bốn vế; `grep` không thấy từ "production" trong file hồ sơ.
+  - `yaml.safe_load` đọc được `pilot_plan.yaml`, không còn dấu `?` ngoài chú thích, mỗi luật dừng đủ bốn vế; `grep` không thấy từ bị cấm (quy tắc 5 của lab) trong file hồ sơ.
   - Đối chiếu nội dung các file với `docs/Ngay13_Lab13_De_bai_hoc_vien.docx` và `docs/Ngay13_Huong_dan_hoc_vien.docx`.
 
 ## 6. Tự đánh giá
