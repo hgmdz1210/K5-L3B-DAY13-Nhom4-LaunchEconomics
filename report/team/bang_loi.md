@@ -47,6 +47,6 @@ Cách phát hiện phải đo được (event, ngưỡng, tần suất). Ngườ
 | --: | --- | --- | --- | --- |
 | 1 | Do người dùng | `refund_ledger_write` lỗi định dạng STK hoặc `handoff_to_staff` (`invalid_bank_account`) > 2%/tuần | Kiểm tra độ dài và định dạng số tài khoản ngay trên form trước khi gửi; hiển thị hướng dẫn nhập đúng | Kỹ sư trưởng agent |
 | 20 | Hệ thống | `refund_ledger_write` có ≥ 2 bản ghi cùng `idempotency_key` hoặc `request_id` (ngưỡng ≥ 1 ca/tuần) | Bắt buộc gắn `idempotency_key` theo `request_id` ở sổ cái và khoá nút gửi lại khi đang xử lý | Kỹ sư trưởng agent |
-| 16 | Ngữ cảnh | Thời điểm gửi thông báo ngoài 07:00–21:00 hoặc `ticket_reopened` do phàn nàn làm phiền > 1%/tuần | Hạn chế gửi thông báo Zalo khung 21:00–07:00 (dời sang 07:30 sáng hôm sau) | Trưởng nhóm CSKH |
+| 16 | Ngữ cảnh | `ticket_reopened` với `reason` phản ánh bị làm phiền ngoài giờ hoặc hiểu nhầm cách tính > 1%/tuần | Hạn chế gửi thông báo Zalo khung 21:00–07:00 (dời sang 07:30 sáng) và ghi rõ cách tính | Trưởng nhóm CSKH |
 | 19 | Giới hạn hệ thống | `handoff_to_staff` với lý do ngoài dữ liệu 12 tháng hoặc ngoài phạm vi > 5%/tuần | Nhận diện sớm giới hạn dữ liệu/phạm vi ở lần chạy 1, thông báo rõ cho khách và chuyển nhân viên kèm tóm tắt | PM trợ lý hoàn phí |
 | 5 | Ngầm | `audit_sample_checked` hằng tuần (100 đơn/tuần) thấy `so_tien_da_hoan != so_tien_dung` > 1% mẫu | Đối soát tự động giá sau mã giảm giá trước khi gọi `refund_ledger_write` và duy trì kiểm mẫu hằng tuần | PM trợ lý hoàn phí |
