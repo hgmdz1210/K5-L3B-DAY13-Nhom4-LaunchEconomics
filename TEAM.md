@@ -5,7 +5,7 @@
 - Tên nhóm: Nhom4
 - Lớp: L3B
 - Repo nhóm: `K5-L3B-DAY13-Nhom4-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt:
+- URL repo, nhánh nộp, commit chốt: https://github.com/hgmdz1210/K5-L3B-DAY13-Nhom4-LaunchEconomics, main, 5b229d
 
 ## Thành viên
 
