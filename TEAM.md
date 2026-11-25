@@ -93,7 +93,7 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Bằng chứng
 
-- Commit `12ee1b5`, `7e4d683`, `a2bc6c1`, `91a14d9`; báo cáo cá nhân `report/team/2A202603989_LeThiLy.md`.
+- Commit `7e4d683`, `a2bc6c1`, `91a14d9`; báo cáo cá nhân `report/team/2A202603989_LeThiLy.md`.
 
 ## QuachNgocHuy-2A202603956
 
